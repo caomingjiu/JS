@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>做一个阶乘相加的联系，结合第三章第四章的内容</title>
+    <!--我准备做一个小练习编写从1！加到n!结合第三章的循环和第四张的函数声明与调用完成-->
+    <script>
+        //这里我用了一个全局变量
+        var x=1;
+        var n=5;
+        var sum=0;
+        //这里是一个阶乘函数
+        function factorial(a,b){
+          return a*b;
+        }
+        //这里是一个循环调用和相加赋值的操作
+        for(var i=1;i<=n;i++){
+        //这里是一个调用阶乘函数
+            x=factorial(i,x);
+            sum=x+sum;
+        }
+        //输出
+        document.write(sum);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

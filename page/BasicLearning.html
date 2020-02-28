@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- <p>函数可以存放在变量中</p>
+    <p id="demo"></p> -->
+
+    <div id="demo">
+      <p id="p1">这是一个段落</p>
+      <p id="p2">这是另外一个段落</p>
+    </div>
+
+    <!-- <input type="button" value="Open Window" onclick="open_win()" /> -->
+
+    <!-- <form>
+      <form>
+        <input type="button" value="Display timed alertbox!" onClick="timedMsg()" />
+      </form>
+      <p>Click on the button above. An alert box will be displayed after 5 seconds.</p>
+    </form> -->
+
+    <!-- <input type="button" value="Start count!" onClick="timedCount()" />
+    <input type="text" id="txt" />
+    <input type="button" value="Stop count!" onClick="stopCount()" /> -->
+  </body>
+  <script>
+    // var x = '你好JavaScript'
+    // document.write(x)
+    // var t = 100
+    // document.write(typeof T)
+
+    // var hello = 'hello world'
+    // var age = 21
+    // var live = true
+    // var girlFriend = null
+    // var favsong = undefined
+    // var Car = {
+    //   name: '奔驰',
+    //   status: '漏油'
+    // }
+    // document.write(Car.name)
+    // document.write(live)
+    // document.write(favsong)
+
+    // var x1 = 34.0
+    // var x2 = 34
+    // document.write(x1 == x2)
+
+    // var y = 123e5
+    // var z = 123e-5
+    // document.write(y)
+    // //此案例中 x1和x2的值相等
+    // var carname = 'Volvo XC60'
+
+    // var answer = "He is called 'Loen'\n"
+    // document.write(carname)
+    // document.write(answer + '<br>')
+
+    // var sayHello = "Hello! '我是一名java程序员'"
+    // document.write(sayHello + '<br>')
+
+    // var x = 3
+    // var y = 4
+    // x = y
+    // document.write(x)
+
+    // typeof true === 'number'
+    // document.write(true)
+    // var num = 10
+    // console.log(num / 10)
+
+    // var isAdult = 15 < 18 ? '未成年人' : '成年人'
+    // document.write(isAdult)
+
+    // var coursename = 'JavaScript 微课'
+    // document.write(coursename[6])
+    // var answer = 'He is called tLusi'
+    // document.write(answer.length + '<br>')
+
+    // var myString1 = '我在学习'
+    // var myString2 = 'JavaScript编程语言'
+    // document.write(myString1 + myString2)
+    // var num = 100
+    // if (num < 20) {
+    //   document.write(num + '比20小')
+    // } else if (num == 20) {
+    //   document.write(num + '为20')
+    // } else {
+    //   document.write(num + '比20大')
+    // }
+
+    // function myFuncation() {
+    //   var x
+    //   var d = new Date().getDay()
+    //   switch (d) {
+    //     case 0:
+    //       x = '今天星期日'
+    //       break
+    //     case 1:
+    //       x = '今天星期一'
+    //       break
+    //     case 2:
+    //       x = '今天星期二'
+    //       break
+    //     case 3:
+    //       x = '今天星期三'
+    //       break
+    //     case 4:
+    //       x = '今天星期四'
+    //       break
+    //     case 5:
+    //       x = '今天星期五'
+    //       break
+    //     case 6:
+    //       x = '今天星期六'
+    //       break
+    //   }
+    //   return x
+    // }
+    // alert(myFuncation())
+
+    // var cars = ['大众', '奔驰', '本田', '特斯拉']
+    // for (var i = 0; i < cars.length; i++) {
+    //   document.write(cars[i] + ',')
+    // }
+
+    // var i = 0
+    // for (; i < 5; ) {
+    //   document.write(i)
+    //   i++
+    // }
+
+    // var myArray = []
+    // for (var i = 1; i < 10; i += 2) {
+    //   myArray.push(i)
+    // }
+    // for (var i = 0; i < myArray.length; i++) {
+    //   document.write(myArray[i] + ',')
+    // }
+
+    // var x = '',
+    //   i = 0
+    // do {
+    //   x = x + 'The number is' + i + '<br>'
+    //   i++
+    // } while (i < 5)
+    // document.write(x)
+
+    // var x = ''
+    // for (i = 0; i <= 10; i++) {
+    //   if (i == 3) {
+    //     continue
+    //   }
+    //   x = '数值是' + i + '<br>'
+    //   document.write(x)
+    // }
+
+    // function myFuncation(a, b) {
+    //   return a * b
+    // }
+    // var res = myFuncation(2, 3)
+    // console.log(res)
+
+    // function myFuncation() {
+    //   alert('调用一个函数')
+    // }
+    // myFuncation()
+
+    // function sum() {
+    //   return arguments[0] + arguments[1]
+    // }
+    // console.log(sum(2, 3))
+
+    // function sum(number1, number2, number3) {
+    //   return number1 + number2 + number3
+    // }
+    // console.log(sum(2, 3, 4))
+
+    // function sayHello(name, age) {
+    //   carName = 'DaZhong'
+    //   console.log(name + '年龄是' + age + '岁')
+    //   console.log(carName)
+    // }
+    // sayHello('tyx')
+    // console.log(carName)
+
+    // alert('您好，这是一条警告框。 \n你必须点确定')
+    // var user = prompt('输入你的名字：')
+    // alert(user)
+
+    // var result = confirm('你确定要离开这个页面？')
+    // if (result == true) {
+    //   alert('感谢你的光临')
+    // } else {
+    //   alert('感谢你继续使用我们的服务！')
+    // }
+
+    // var course = { name: 'js', lessons: 54 }
+    // console.log(course.name.length)
+
+    // var ourDog = {
+    //   name: 'Camper',
+    //   legs: 4,
+    //   tails: 1,
+    //   friends: ['everything!']
+    // }
+    // ourDog.bark = 'bow-wow'
+    // var c1 = ourDog['tails']
+    // console.log(c1)
+    // delete ourDog['tails']
+    // var c2 = ourDog['tails']
+    // console.log(c2)
+    // console.log(ourDog)
+
+    //将message中的单词全部转换成大写
+    // var message = 'Hello world!'
+    // var x = message.toUpperCase()
+    // console.log(x)
+
+    // var a = 'age'
+    // var myObj = {
+    //   name: 'Loen',
+    //   age: '22',
+    //   eat: function() {
+    //     return "I'm eating"
+    //   }
+    // }
+    // console.log(myObj['name'])
+    // console.log(myObj[a])
+    // console.log(myObj['eat']())
+
+    // function person(fristName, lastName, age, eyecolor) {
+    //   this.fristName = fristName
+    //   this.lastName = lastName
+    //   this.age = age
+    //   this.eyecolor = eyecolor
+    // }
+    // var myFather = new person('John', 'Doe', 50, 'blue')
+    // var myMother = new person('sally', 'Rally', 50, 'green')
+    // console.log(myFather.age)
+    // console.log(myMother.fristName)
+
+    // var John = { name: 'John', age: 25 }
+    // var Loen = { name: 'Loen', age: 28 }
+    // var John = {
+    //   name: 'John',
+    //   age: 28
+    // }
+    // var Loen = {
+    //   name: 'Loen',
+    //   age: 28
+    // }
+
+    //5.添加方法 创建对象函数 访问对象函数
+    // function myFuncation(a, b) {
+    //   return a * b
+    // }
+    // console.log(myFuncation(2, 3))
+
+    // var x = function(a, b) {
+    //   return a * b
+    // }
+    // document.getElementById('demo').innerHTML = x(4, 3)
+
+    //六数组 创建数组
+    // var myCars = new Array('saab', 'volvo', 'bmw')
+
+    // var myCars = new Array()
+    // myCars[0] = 'sabb'
+    // myCars[1] = 'volvo'
+    // myCars[2] = 'bmw'
+    // console.log(myCars[2])
+
+    //push（）方法
+    // var a = []
+    // a[0] = 'zero'
+    // a[1] = 'one'
+    // a.push('two')
+    //遍历输出数组
+    // for (var i = 0; i < a.length; i++) {
+    //   console.log(a[i])
+    // }
+    //forEach遍历
+    // a.forEach(function(item) {
+    //   console.log(item)
+    // })
+    //for-in
+    // for (var key in a) {
+    //   console.log(a[key])
+    // }
+
+    //pop()方法:抛出数组的最后一个值
+    // var oneDown = [1, 4, 6].pop()
+    // console.log(oneDown)
+    //shift()方法：抛出数组第一个值
+    // var oneDown = [1, 4, 6].shift()
+    // console.log(oneDown)
+
+    //unshift()方法:在数组的头部添加元素
+    // var a = ['zero']
+    // a.unshift('one')
+    // a.forEach(function(item) {
+    //   console.log(item)
+    // })
+
+    //concat()方法 允许连接数组并创建一个全新的数组
+    // var c1 = ['HTML', 'CSS']
+    // var c2 = ['JS', 'Python']
+    // var courses = c1.concat(c2)
+    // courses.forEach(function(item) {
+    //   console.log(item)
+    // })
+
+    //forEach() 调用数组的每个元素，并将元素传递给回调函数
+    //对于空数组不执行回调函数
+    // var numbers = [64, 45, 72, 11, 49]
+    // function myFuncation(item, index) {
+    //   var demo = document.getElementById('demo')
+    //   //item 传递的是数组的值，index 传递的事索引
+    //   demo.innerHTML = demo.innerHTML + 'index[' + index + ']:' + item + '<br>'
+    // }
+    // numbers.forEach(myFuncation)
+
+    //indexOf()方法 返回数组中某个指定的元素位置 ,没有找到返回-1
+    // var fruits = ['香蕉', '橙子', '苹果', '甜瓜', '苹果']
+    // var a = fruits.indexOf('苹果')
+    // var b = fruits.indexOf('火龙果')
+    // console.log(a + ',' + b)
+
+    //slice（）方法从已有的数组中返回选定的元素
+    // var fruits = ['香蕉', '橙子', '苹果', '甜瓜', '苹果']
+    // var citrus = fruits.slice(1, 4)
+    // citrus.forEach(function(item) {
+    //   console.log(item)
+    // })
+
+    //6.3关联数组  person被视为一个对象而不是一个数组
+    //name和age 称为person对象的属性
+    // var person = []
+    // person['name'] = 'Loen'
+    // person['age'] = 28
+    // console.log(person['age'])
+
+    //JS核心对象
+    //7.1string对象定义
+    // var txt = new String('string')
+    // var txt = 'string'
+    // //返回在指定位置的字符
+    // console.log(txt.charAt(1))
+    // //返回在指定位置的字符的Unicode编码
+    // console.log(txt.charCodeAt(1))
+    // //查找t在txt首次出现的位置
+    // console.log(txt.indexOf('t'))
+    // //查找字符串中是否包含指定的子字符串
+    // console.log(txt.includes('t'))
+    // //从后向前查找字符
+    // console.log(txt.lastIndexOf('t'))
+
+    // var str = 'Hello,Nier'
+    // var a = str.toLowerCase() //把字符串转为小写
+    // var b = str.toUpperCase() //把字符串转为大写
+    // var c = '   hello world '.trim() //去掉字符串两边的空白
+    // console.log(a + b + c)
+
+    //将首次出现的blue替换成red
+    // var str1 = 'Mr Blue has a blue house and a blue car and a blue hat'
+    // var n = str1.replace('blue', 'red')
+    // console.log(n)
+
+    // //用正则表达式匹配字符串中所有出现的blue替换成red
+    // var c = str1.replace(/blue/g, 'red')
+    // console.log(c)
+
+    // // document.write(str1.substring(3) + '<br>')
+    // document.write(str1.substring(3, 9))
+
+    // var winInnerHeight = window.innerHeight
+    // console.log(winInnerHeight)
+
+    // window.alert('hello world')
+    // window.open(URL, name, specs, replace)
+
+    // function open_win() {
+    //   window.open('http://www.baidu.com')
+    // }
+    // function openWin() {
+    //   myWindow = window.open('', '', (width = 200), (htight = 100))
+    //   myWindow.document.write('<p>这是我的窗口</p>')
+    //   myWindow.focus()
+    // }
+
+    // function timedMsg() {
+    //   var t = setTimeout("alert('5 seconds!')", 5000)
+    // }
+
+    //打开一个新窗口，3秒后将该窗口关闭
+    // var myWindow = window.open('', '', 'width = 200', 'htight = 100')
+    // myWindow.document.write('<p>这是一个新窗口</p>')
+    // setTimeout(function() {
+    //   myWindow.close
+    // }, 9000)
+
+    // var myVar
+    // function myFuncation() {
+    //   myVar = setTimeout(() => {
+    //     alert('hello')
+    //   }, 3000)
+    // }
+    // function myStopFunction() {
+    //   clearTimeout(myVar)
+    // }
+
+    //每秒调用一次timedCount（）函数，也可以使用一个按钮来终止这个定时消息
+    // var c = 0
+    // var t
+    // function timedCount() {
+    //   document.getElementById('txt').value = c
+    //   c = c + 1
+    //   t = setTimeout('timedCount()', 1000)
+    // }
+    // function stopCount() {
+    //   clearTimeout(t)
+    // }
+
+    //json数组
+    // {
+    //   'sites'[({ name: 'baidu', url: 'www.baidu.com' }, { name: 'Google', url: 'www.google.com' })]
+    // }
+    // var text =
+    //   '{"employees":[' +
+    //   '{"name":"baidu","site":"http://www.baidu.com"},' +
+    //   '{"name":"google","site":"http://www.google.com"}]}'
+    // obj = JSON.parse(text)
+    // document.getElementById('demo').innerHTML = obj.employees[0].name + ' ' + obj.employees[1].site
+    //带revicer的案例
+    // JSON.parse('{"p":5,"s":1.5,"t":-3}', function(k, v) {
+    //   if (k === '') return v
+    //   return v * 2
+    // })
+
+    // JSON.parse('{"1":1,"2":2,"3":{"4":4,"5":{"6":6}}}', function(k, v) {
+    //   console.log(k)
+    //   return v
+    // })
+
+    //返回包含JSON文本的字符串
+    // var str = { name: 'baidu', site: 'http://www.baidu.com' }
+    // str_pretty1 = JSON.stringify(str)
+    // document.write('只有一个参数情况')
+    // document.write('<br>')
+    // document.write('<pre>' + str_pretty1 + '</pre>')
+
+    // document.write('<br>')
+    // str_pretty2 = JSON.stringify(str, null, 4)
+    // document.write('使用参数情况：')
+    // document.write('<br>')
+    // document.write('<pre>' + str_pretty2 + '</pre>')
+
+    //Math对象属性
+    // document.write(Math.PI + '<br>')
+    // document.write(Math.E + '<br>')
+    // document.write(Math.LN2 + '<br>')
+    // document.write(Math.LN10 + '<br>')
+    // document.write(Math.LOG2E + '<br>')
+    // document.write(Math.LOG10E + '<br>')
+    // document.write(Math.SQRT1_2 + '<br>')
+    // document.write(Math.SQRT2 + '<br>')
+    //Math对象包含许多用于计算的方法
+    // var number = Math.sqrt(4)
+    // document.write(number)
+
+    //计算一个数字的平方根
+    // var n = prompt('请输入一个数字：', '')
+    // var answer = Math.sqrt(n)
+    // alert('数字' + n + ' 的平方根:' + answer)
+
+    // //floor()方法
+    // document.write(Math.floor(45.95) + '<br>')
+    // document.write(Math.floor(45.95) + '<br>')
+    // document.write(Math.floor(50.05) + '<br>')
+    // document.write(Math.floor(4) + '<br>')
+    // document.write(Math.floor(-45.05) + '<br>')
+    // document.write(Math.floor(-45.95) + '<br>')
+    // //返回1到10之间的一个随机数
+    // document.write(Math.random() * 10 + 1 + '<br>')
+
+    // var d = new Date(1651665111655) //d存储了当前的日期的时间
+    // document.write(d + '<br>')
+
+    // Date对象的方法
+    // var d = new Date()
+    // var house = d.getHours()
+    // document.write(d + '<br>')
+    // document.write(house + '<br>')
+
+    //每秒打印一次当前浏览器的时间
+    // function printTime() {
+    //   var d = new Date()
+    //   var hours = d.getHours()
+    //   var mins = d.getMinutes()
+    //   var secs = d.getSeconds()
+    //   document.body.innerHTML = hours + ':' + mins + ':' + secs
+    // }
+    // setInterval(printTime, 1000)
+
+    //创建一个新的段落
+    // var p = document.createElement('p')
+    // var node = document.createTextNode('一些新的文本')
+    // //添加文本到段落
+    // p.appendChild(node)
+
+    // var div = document.getElementById('demo')
+    // //将段落添加到div中
+    // div.appendChild(p)
+
+    //移除元素
+    //要删除HTML元素 必须选择元素的父项并使用removeChil(node)方法
+    // var parent = document.getElementById('demo')
+    // var child = document.getElementById('p1')
+    // // parent.removeChile(child)
+    // chil.parentNode.removeChild(child)
+
+    //替换元素
+    //要替换HTML元素 使用element.replaceChild（newNode.oldNod）方法
+    // var p = document.createElement('p')
+    // var node = document.createTextNode('这是新的文本')
+    // p.appendChild(node)
+
+    // var parent = document.getElementById('demo')
+    // var child = document.getElementById('p1')
+    // parent.replaceChild(p, child)
+  </script>
+</html>
